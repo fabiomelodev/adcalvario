@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <h3 class="text-[40px] font-bold font-myriad-pro uppercase text-[#707070] mb-4">
+                <h3 class="text-[30px] lg:text-[40px] font-bold font-myriad-pro uppercase text-[#707070] mb-4">
                     Nossa missão
                 </h3>
 
@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <h3 class="text-[40px] font-bold font-myriad-pro uppercase text-[#707070] mb-4">
+                <h3 class="text-[30px] lg:text-[40px] font-bold font-myriad-pro uppercase text-[#707070] mb-4">
                     Nossa visão
                 </h3>
 
@@ -58,7 +58,7 @@
                     </div>
                 </div>
 
-                <h3 class="text-[40px] font-bold font-myriad-pro uppercase text-[#707070] mb-4" style="line-height:100%">
+                <h3 class="text-[30px] lg:text-[40px] font-bold font-myriad-pro uppercase text-[#707070] mb-4" style="line-height:100%">
                     Nossos princípios
                 </h3>
 
