@@ -165,10 +165,10 @@ function get_nav_links()
             'link'  => 'contato'
         ],
 
-        [
-            'title' => 'Book Online',
-            'link'  => 'book-online'
-        ]
+        // [
+        //     'title' => 'Book Online',
+        //     'link'  => 'book-online'
+        // ]
     ];
 
     return $items;
