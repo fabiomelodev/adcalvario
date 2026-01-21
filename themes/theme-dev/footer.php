@@ -46,8 +46,9 @@
                 <?php
                 $status = false;
 
-                if (have_rows('redes_sociais', 'option')) :
-                    while (have_rows('redes_sociais', 'option')): the_row();
+                if (have_rows('redes_sociais', 'option')):
+                    while (have_rows('redes_sociais', 'option')):
+                        the_row();
                         foreach (get_sub_field('visivel_em') as $hidden) {
                             if ($hidden == 'Rodapé') {
                                 $status = true;
@@ -58,23 +59,24 @@
                             }
                         }
 
-                        if ($status) :
-                ?>
+                        if ($status):
+                            ?>
                             <li class="mb-2 last:mb-0">
-                                <a class="flex items-center" href="<?php echo get_sub_field('link') ?>" target="_blank" rel="noreferrer noopener">
-                                    <?php if (get_sub_field('icone') == 'Facebook') : ?>
+                                <a class="flex items-center" href="<?php echo get_sub_field('link') ?>" target="_blank"
+                                    rel="noreferrer noopener">
+                                    <?php if (get_sub_field('icone') == 'Facebook'): ?>
                                         <?php echo get_template_part('template-parts/icons/content', 'facebook', get_icon_setting('w-6 h-6 fill-white')); ?>
                                     <?php endif; ?>
 
-                                    <?php if (get_sub_field('icone') == 'Instagram') : ?>
+                                    <?php if (get_sub_field('icone') == 'Instagram'): ?>
                                         <?php echo get_template_part('template-parts/icons/content', 'instagram', get_icon_setting('w-6 h-6 fill-white')); ?>
                                     <?php endif; ?>
 
-                                    <?php if (get_sub_field('icone') == 'Whatsapp') : ?>
+                                    <?php if (get_sub_field('icone') == 'Whatsapp'): ?>
                                         <?php echo get_template_part('template-parts/icons/content', 'whatsapp', get_icon_setting('w-6 h-6 fill-white')); ?>
                                     <?php endif; ?>
 
-                                    <?php if (get_sub_field('icone') == 'Youtube') : ?>
+                                    <?php if (get_sub_field('icone') == 'Youtube'): ?>
                                         <?php echo get_template_part('template-parts/icons/content', 'youtube', get_icon_setting('w-6 h-6 fill-white')); ?>
                                     <?php endif; ?>
 
@@ -83,7 +85,7 @@
                                     </span>
                                 </a>
                             </li>
-                <?php
+                            <?php
                         endif;
                     endwhile;
                 endif;
@@ -96,8 +98,9 @@
                 Desenvolvido por:
             </h6>
 
-            <a class="text-2xl font-black text-white" href="https://fabiomelodev.com.br" target="_blank" rel="noreferrer noopener">
-                Fabio Melo Dev
+            <a class="text-2xl font-black text-white" href="https://singletemas.com.br" target="_blank"
+                rel="noreferrer noopener">
+                Single Temas
             </a>
         </div>
 

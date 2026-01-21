@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 
 new Swiper(".js-swiper-home-banner", {
   modules: [Navigation, Pagination],
-  slidesPerView: 2,
+  slidesPerView: 1,
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -23,7 +23,7 @@ new Swiper(".js-swiper-home-banner", {
     },
 
     992: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
   },
 });

@@ -18,7 +18,7 @@
                     </h1>
 
                     <div class="hidden xl:flex items-center gap-4">
-                        <?php for ($i = 0; $i < 3; $i++) : ?>
+                        <?php for ($i = 0; $i < 3; $i++): ?>
                             <span class="w-4 h-4 rounded-full block bg-white"></span>
                         <?php endfor; ?>
                     </div>
@@ -26,27 +26,29 @@
 
                 <div class="hidden xl:flex gap-x-8">
                     <?php
-                    if (have_rows('redes_sociais', 'option')) :
-                        while (have_rows('redes_sociais', 'option')): the_row();
-                    ?>
-                            <a class="flex justify-center items-center gap-4 py-4" href="<?php echo get_sub_field('link') ?>" target="_blank" rel="noreferrer nopenener">
-                                <?php if (get_sub_field('icone') == 'Facebook') : ?>
+                    if (have_rows('redes_sociais', 'option')):
+                        while (have_rows('redes_sociais', 'option')):
+                            the_row();
+                            ?>
+                            <a class="transition hover:scale-110 flex justify-center items-center gap-4 py-4"
+                                href="<?php echo get_sub_field('link') ?>" target="_blank" rel="noreferrer nopenener">
+                                <?php if (get_sub_field('icone') == 'Facebook'): ?>
                                     <?php echo get_template_part('template-parts/icons/content', 'facebook', get_icon_setting('w-9 h-9 fill-white')); ?>
                                 <?php endif; ?>
 
-                                <?php if (get_sub_field('icone') == 'Instagram') : ?>
+                                <?php if (get_sub_field('icone') == 'Instagram'): ?>
                                     <?php echo get_template_part('template-parts/icons/content', 'instagram', get_icon_setting('w-9 h-9 fill-white')); ?>
                                 <?php endif; ?>
 
-                                <?php if (get_sub_field('icone') == 'Whatsapp') : ?>
+                                <?php if (get_sub_field('icone') == 'Whatsapp'): ?>
                                     <?php echo get_template_part('template-parts/icons/content', 'whatsapp', get_icon_setting('w-9 h-9 fill-white')); ?>
                                 <?php endif; ?>
 
-                                <?php if (get_sub_field('icone') == 'Youtube') : ?>
+                                <?php if (get_sub_field('icone') == 'Youtube'): ?>
                                     <?php echo get_template_part('template-parts/icons/content', 'youtube', get_icon_setting('w-9 h-9 fill-white')); ?>
                                 <?php endif; ?>
                             </a>
-                    <?php
+                            <?php
                         endwhile;
                     endif;
                     ?>
