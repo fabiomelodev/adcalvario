@@ -5,7 +5,7 @@
         <div class="w-full xl:w-6/12">
 
             <div class="relative mb-6 pb-4">
-                <h3 class="text-3xl font-semibold font-montserrat uppercase text-center">
+                <h3 class="text-3xl font-semibold font-montserrat text-center">
                     Sobre AD. Calvário
                 </h3>
 
