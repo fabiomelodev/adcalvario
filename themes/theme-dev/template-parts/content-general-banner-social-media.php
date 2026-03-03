@@ -1,4 +1,5 @@
-<section class="w-full h-[220px] xl:h-[480px] relative flex items-end bg-cover bg-no-repeat pb-20">
+<section
+    class="w-full h-[220px] xl:h-[480px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden relative flex items-end bg-cover bg-no-repeat pb-20">
 
     <?php
     the_post_thumbnail('post-thumbnail', array(
@@ -11,7 +12,8 @@
     <div class="container relative z-20">
 
         <div class="w-full">
-            <div class="border-b-[8px] border-white flex flex-col xl:flex-row justify-between pb-6">
+            <div
+                class="border-b-[2px] border-white rounded-bl-[20px] rounded-br-[20px] flex flex-col xl:flex-row justify-between pb-6">
                 <div class="flex justify-center xl:justify-start items-center gap-x-8">
                     <h1 class="text-3xl xl:text-6xl font-semibold font-myriad-pro uppercase text-white">
                         <?php the_title() ?>
