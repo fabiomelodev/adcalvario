@@ -8,13 +8,13 @@
             <!-- slide -->
             <?php foreach (get_field('banner') as $banner): ?>
                 <div class="swiper-slide">
-                    <a class="h-full relative flex justify-center items-center" href="#">
+                    <div class="h-full relative flex justify-center items-center">
                         <img class="w-full h-full top-0 left-0 opacity-50 object-cover absolute z-10"
                             src="<?php echo $banner['url'] ?>" alt="Banner - AD. Calvário" />
 
                         <img class="h-full object-cover relative z-20" src="<?php echo $banner['url'] ?>"
                             alt="Banner - AD. Calvário" />
-                    </a>
+                    </div>
                 </div>
             <?php endforeach; ?>
             <!-- end slide -->
