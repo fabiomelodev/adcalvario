@@ -137,32 +137,32 @@ function get_nav_links()
     $items = [
         [
             'title' => 'Início',
-            'link'  => ''
+            'link' => ''
         ],
 
         [
             'title' => 'Quem Somos',
-            'link'  => 'quem-somos'
+            'link' => 'quem-somos'
         ],
 
         [
             'title' => 'Doações',
-            'link'  => 'doacoes'
+            'link' => 'doacoes'
         ],
 
         [
             'title' => 'Eventos',
-            'link'  => 'eventos'
+            'link' => 'eventos'
         ],
 
         [
             'title' => 'Membros',
-            'link'  => 'membros'
+            'link' => 'membros'
         ],
 
         [
             'title' => 'Contato',
-            'link'  => 'contato'
+            'link' => 'contato'
         ],
 
         // [
@@ -189,11 +189,15 @@ function get_general_gallery_setting($events): array
         while ($events->have_posts()) {
             $events->the_post();
 
-            foreach (get_field('galeria') as $gallery) {
-                array_push($photos, [
-                    'title' => get_the_title(),
-                    'url'   => $gallery['url']
-                ]);
+            if (is_array(get_field('galeria'))) {
+                foreach (get_field('galeria') as $gallery) {
+                    if ($gallery['url']) {
+                        array_push($photos, [
+                            'title' => get_the_title(),
+                            'url' => $gallery['url']
+                        ]);
+                    }
+                }
             }
         }
     }
