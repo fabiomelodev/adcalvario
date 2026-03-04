@@ -91,15 +91,17 @@ get_header();
 						</p>
 					</div>
 
-					<div class="mt-16">
-						<h2 class="text-xl font-semibold mb-6">
-							Descrição do Evento
-						</h2>
+					<?php if (get_the_content()): ?>
+						<div class="mt-16">
+							<h2 class="text-xl font-semibold mb-6">
+								Descrição do Evento
+							</h2>
 
-						<span class="css-content">
-							<?php the_content() ?>
-						</span>
-					</div>
+							<span class="css-content">
+								<?php the_content() ?>
+							</span>
+						</div>
+					<?php endif; ?>
 				</div>
 			</section>
 			<!-- end content -->
