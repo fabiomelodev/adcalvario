@@ -19,13 +19,21 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-		<?php while (have_posts()) : the_post(); ?>
+		<?php while (have_posts()):
+			the_post(); ?>
 			<!-- banner -->
 			<?php echo get_template_part('template-parts/content', 'general-banner-social-media') ?>
 			<!-- banner -->
 
-			<section>
-				<img class="w-full object-cover" src="<?php echo get_field('imagem_para_contribuicao') ?>" alt="<?php the_title() ?> - AD. Calvário" />
+			<section class="mt-10">
+				<div class="container flex justify-center">
+
+					<div class="lg:w-1/2">
+						<img class="w-full rounded-2xl object-cover"
+							src="<?php echo get_field('imagem_para_contribuicao') ?>"
+							alt="<?php the_title() ?> - AD. Calvário" />
+					</div>
+				</div>
 			</section>
 		<?php endwhile; ?>
 
