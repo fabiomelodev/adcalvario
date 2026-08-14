@@ -16,11 +16,11 @@
                     while (have_rows('diretoria')):
                         the_row();
                         ?>
-                        <div class="w-1/2 px-16">
+                        <div class="lg:w-1/3 px-4">
                             <div
-                                class="shadow-lg border border-[#707070]/20 rounded-lg overflow-hidden flex justify-center items-center bg-[#E2E2E2] mb-1 <?php echo get_sub_field('foto') ? '' : 'p-8' ?>">
+                                class="h-[258px] shadow-lg border border-[#707070]/20 rounded-lg overflow-hidden flex justify-center items-center bg-[#E2E2E2] mb-1 <?php echo get_sub_field('foto') ? '' : 'p-8' ?>">
                                 <?php if (get_sub_field('foto')): ?>
-                                    <img class="w-full h-full object-cover" src="<?php echo get_sub_field('foto') ?>"
+                                    <img class="w-full h-full object-contain" src="<?php echo get_sub_field('foto') ?>"
                                         alt="AD. Calvário - <?php echo get_sub_field('nome') ?>" />
                                 <?php else: ?>
                                     <img src="<?php echo get_template_directory_uri() ?>/resources/images/icon-user.png"
