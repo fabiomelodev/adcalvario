@@ -62,25 +62,25 @@
                         if ($status):
                             ?>
                             <li class="mb-2 last:mb-0">
-                                <a class="flex items-center" href="<?php echo get_sub_field('link') ?>" target="_blank"
+                                <a class="group flex items-center" href="<?php echo get_sub_field('link') ?>" target="_blank"
                                     rel="noreferrer noopener">
                                     <?php if (get_sub_field('icone') == 'Facebook'): ?>
-                                        <?php echo get_template_part('template-parts/icons/content', 'facebook', get_icon_setting('w-6 h-6 fill-white')); ?>
+                                        <?php echo get_template_part('template-parts/icons/content', 'facebook', get_icon_setting('w-6 h-6 fill-white group-hover:fill-[#bc7051]')); ?>
                                     <?php endif; ?>
 
                                     <?php if (get_sub_field('icone') == 'Instagram'): ?>
-                                        <?php echo get_template_part('template-parts/icons/content', 'instagram', get_icon_setting('w-6 h-6 fill-white')); ?>
+                                        <?php echo get_template_part('template-parts/icons/content', 'instagram', get_icon_setting('w-6 h-6 fill-white group-hover:fill-[#bc7051]')); ?>
                                     <?php endif; ?>
 
                                     <?php if (get_sub_field('icone') == 'Whatsapp'): ?>
-                                        <?php echo get_template_part('template-parts/icons/content', 'whatsapp', get_icon_setting('w-6 h-6 fill-white')); ?>
+                                        <?php echo get_template_part('template-parts/icons/content', 'whatsapp', get_icon_setting('w-6 h-6 fill-white group-hover:fill-[#bc7051]')); ?>
                                     <?php endif; ?>
 
                                     <?php if (get_sub_field('icone') == 'Youtube'): ?>
-                                        <?php echo get_template_part('template-parts/icons/content', 'youtube', get_icon_setting('w-6 h-6 fill-white')); ?>
+                                        <?php echo get_template_part('template-parts/icons/content', 'youtube', get_icon_setting('w-6 h-6 fill-white group-hover:fill-[#bc7051]')); ?>
                                     <?php endif; ?>
 
-                                    <span class="text-sm font-light text-white ml-2">
+                                    <span class="text-sm font-light text-white group-hover:text-[#bc7051] ml-2">
                                         <?php echo get_sub_field('texto') ?>
                                     </span>
                                 </a>

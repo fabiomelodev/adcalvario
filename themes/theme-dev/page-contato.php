@@ -19,7 +19,8 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-		<?php while (have_posts()) : the_post(); ?>
+		<?php while (have_posts()):
+			the_post(); ?>
 
 			<section class="py-10 lg:py-20">
 
@@ -98,34 +99,36 @@ get_header();
 						</div>
 					</div>
 
-					<div class="flex flex-col justify-center items-center gap-4">
+					<div class="flex flex-col justify-center gap-4 pl-4 lg:pl-20">
 
 						<?php
-						if (have_rows('redes_sociais', 'option')) :
-							while (have_rows('redes_sociais', 'option')): the_row();
-						?>
-								<a class="flex justify-center items-center gap-4 py-4" href="<?php echo get_sub_field('link') ?>" target="_blank" rel="noreferrer nopenener">
-									<?php if (get_sub_field('icone') == 'Facebook') : ?>
-										<?php echo get_template_part('template-parts/icons/content', 'facebook', get_icon_setting('w-9 h-9 fill-[#BA6239]')); ?>
+						if (have_rows('redes_sociais', 'option')):
+							while (have_rows('redes_sociais', 'option')):
+								the_row();
+								?>
+								<a class="group flex items-center gap-4 py-4" href="<?php echo get_sub_field('link') ?>"
+									target="_blank" rel="noreferrer nopenener">
+									<?php if (get_sub_field('icone') == 'Facebook'): ?>
+										<?php echo get_template_part('template-parts/icons/content', 'facebook', get_icon_setting('w-9 h-9 fill-[#BA6239] group-hover:fill-[#9d0a26]')); ?>
 									<?php endif; ?>
 
-									<?php if (get_sub_field('icone') == 'Instagram') : ?>
-										<?php echo get_template_part('template-parts/icons/content', 'instagram', get_icon_setting('w-9 h-9 fill-[#BA6239]')); ?>
+									<?php if (get_sub_field('icone') == 'Instagram'): ?>
+										<?php echo get_template_part('template-parts/icons/content', 'instagram', get_icon_setting('w-9 h-9 fill-[#BA6239] group-hover:fill-[#9d0a26]')); ?>
 									<?php endif; ?>
 
-									<?php if (get_sub_field('icone') == 'Whatsapp') : ?>
-										<?php echo get_template_part('template-parts/icons/content', 'whatsapp', get_icon_setting('w-9 h-9 fill-[#BA6239]')); ?>
+									<?php if (get_sub_field('icone') == 'Whatsapp'): ?>
+										<?php echo get_template_part('template-parts/icons/content', 'whatsapp', get_icon_setting('w-9 h-9 fill-[#BA6239] group-hover:fill-[#9d0a26]')); ?>
 									<?php endif; ?>
 
-									<?php if (get_sub_field('icone') == 'Youtube') : ?>
-										<?php echo get_template_part('template-parts/icons/content', 'youtube', get_icon_setting('w-9 h-9 fill-[#BA6239]')); ?>
+									<?php if (get_sub_field('icone') == 'Youtube'): ?>
+										<?php echo get_template_part('template-parts/icons/content', 'youtube', get_icon_setting('w-9 h-9 fill-[#BA6239] group-hover:fill-[#9d0a26]')); ?>
 									<?php endif; ?>
 
-									<span class="text-sm font-bold text-[#BA6239]">
+									<span class="text-sm font-bold text-[#BA6239] group-hover:text-[#9d0a26]">
 										<?php echo get_sub_field('texto') ?>
 									</span>
 								</a>
-						<?php
+								<?php
 							endwhile;
 						endif;
 						?>
