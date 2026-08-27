@@ -7,8 +7,40 @@
  *
  * @package Theme Dev
  */
+function getFormatDateAsDayAndMonth(string $date): string
+{
+	$date = DateTime::createFromFormat('d/m/Y', $date);
 
-if (!function_exists('theme_dev_setup')) :
+	if (!$date) {
+		return 'Data inválida';
+	}
+
+	$formatter = new IntlDateFormatter(
+		'pt_BR',
+		IntlDateFormatter::NONE,
+		IntlDateFormatter::NONE,
+		null,
+		null,
+		"d 'de' MMMM"
+	);
+
+	return $formatter->format($date);
+}
+
+function limitWords(string $text, int $limit = 10, string $suffix = '...'): string
+{
+	$words = explode(' ', trim($text));
+
+	if (count($words) <= $limit) {
+		return $text;
+	}
+
+	$limitedWords = array_slice($words, 0, $limit);
+
+	return implode(' ', $limitedWords) . $suffix;
+}
+
+if (!function_exists('theme_dev_setup')):
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -73,10 +105,10 @@ if (!function_exists('theme_dev_setup')) :
 		 */
 		add_theme_support('custom-logo');
 		add_theme_support('custom-logo', array(
-			'height'      => 100,
-			'width'       => 400,
+			'height' => 100,
+			'width' => 400,
 			'flex-height' => true,
-			'flex-width'  => true,
+			'flex-width' => true,
 			'header-text' => array('site-title', 'site-description'),
 		));
 	}
@@ -107,13 +139,13 @@ add_action('after_setup_theme', 'theme_dev_content_width', 0);
 function theme_dev_widgets_init()
 {
 	register_sidebar(array(
-		'name'          => esc_html__('Sidebar', 'theme-dev'),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__('Add widgets here.', 'theme-dev'),
+		'name' => esc_html__('Sidebar', 'theme-dev'),
+		'id' => 'sidebar-1',
+		'description' => esc_html__('Add widgets here.', 'theme-dev'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	));
 }
 add_action('widgets_init', 'theme_dev_widgets_init');
