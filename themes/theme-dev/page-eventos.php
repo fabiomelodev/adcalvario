@@ -19,13 +19,14 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-		<?php while (have_posts()) : the_post(); ?>
+		<?php while (have_posts()):
+			the_post(); ?>
 			<!-- banner -->
 			<?php echo get_template_part('template-parts/content', 'general-banner-social-media') ?>
 			<!-- banner -->
 
 			<!-- search -->
-			<section class="relative -mt-8 z-10">
+			<section class="relative hidden -mt-8 z-10">
 				<div class="container flex justify-center px-2 xl:px-4">
 
 					<div class="w-full xl:w-8/12">
@@ -37,7 +38,8 @@ get_header();
 								<div class="flex flex-wrap justify-center gap-y-2">
 
 									<div class="w-full xl:w-10/12">
-										<input class="input-field" type="text" name="search" placeholder="Pesquisar por evento..." />
+										<input class="input-field" type="text" name="search"
+											placeholder="Pesquisar por evento..." />
 									</div>
 
 									<div class="w-full xl:w-2/12">
@@ -54,26 +56,7 @@ get_header();
 			<!-- end search -->
 
 			<!-- events -->
-			<?php
-			$date_current = date('Ymd');
-
-			$events_args = array(
-				'posts_per_page' => -1,
-				'post_type'      => 'evento',
-				'meta_query'     => array(
-					array(
-						'key'     => 'data_do_evento',
-						'value'   => $date_current,
-						'compare' => '>=',
-						'type'    => 'DATE'
-					)
-				),
-				'orderby' => 'meta_value',
-				'order'   => 'DESC'
-			);
-
-			echo get_template_part('template-parts/content', 'section-events', $events_args)
-			?>
+			<?php echo get_template_part('template-parts/content', 'section-events') ?>
 			<!-- end events -->
 
 			<!-- general categories -->
@@ -88,8 +71,8 @@ get_header();
 			<?php
 			$args = array(
 				'posts_per_page' => -1,
-				'post_type'      => 'evento',
-				'order'          => 'DESC'
+				'post_type' => 'evento',
+				'order' => 'DESC'
 			);
 
 			$all_events = new WP_Query($args);
