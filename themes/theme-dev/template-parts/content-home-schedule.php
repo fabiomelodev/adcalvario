@@ -156,9 +156,12 @@ $schedules = new WP_Query($args);
                                             <div class="h-[440px] shadow-lg rounded-xl overflow-hidden relative flex justify-center items-center cursor-pointer"
                                                 x-data="{ overlay: false }" x-on:mouseover="overlay = true"
                                                 x-on:mouseout="overlay = false">
-                                                <!-- <img class="w-full h-full object-cover" src="<php echo get_template_directory_uri() ?>/resources/images/top-banner.png" alt="Categoria - AD. Calvário" /> -->
 
-                                                <img class="w-full h-full transition duration-300 object-cover"
+                                                <img class="w-full h-full top-0 left-0 transition duration-300 opacity-50 object-cover absolute"
+                                                    src="<?php echo get_sub_field('imagem'); ?>"
+                                                    alt="<?php echo get_sub_field('titulo') . ' - ' . get_bloginfo(); ?>">
+
+                                                <img class="w-full h-full transition duration-300 object-contain"
                                                     src="<?php echo get_sub_field('imagem'); ?>"
                                                     alt="<?php echo get_sub_field('titulo') . ' - ' . get_bloginfo(); ?>"
                                                     x-bind:class="{ 'scale-110': overlay }" />
