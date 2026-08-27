@@ -22,9 +22,13 @@ get_header();
 
 				<div class="container relative">
 
-					<div class="h-[400px] rounded-xl overflow-hidden bg-red-500">
+					<div class="h-[400px] rounded-xl overflow-hidden relative">
 						<?php
-						the_post_thumbnail('post-thumbnail', array('class' => 'w-full h-full object-cover', 'alt' => get_the_title()));
+						the_post_thumbnail('post-thumbnail', array('class' => 'w-full h-full top-0 left-0 opacity-50 object-cover absolute', 'alt' => get_the_title()));
+						?>
+
+						<?php
+						the_post_thumbnail('post-thumbnail', array('class' => 'w-full h-full object-contain relative', 'alt' => get_the_title()));
 						?>
 					</div>
 
