@@ -132,6 +132,28 @@ function get_month($month)
     return get_months()[$month];
 }
 
+function get_month_current_complete()
+{
+    $months = array(
+        1 => 'Janeiro',
+        2 => 'Fevereiro',
+        3 => 'Março',
+        4 => 'Abril',
+        5 => 'Maio',
+        6 => 'Junho',
+        7 => 'Julho',
+        8 => 'Agosto',
+        9 => 'Setembro',
+        10 => 'Outubro',
+        11 => 'Novembro',
+        12 => 'Dezembro'
+    );
+
+    $months_number = (int) date('n');
+
+    return $months[$months_number];
+}
+
 function get_nav_links()
 {
     $items = [

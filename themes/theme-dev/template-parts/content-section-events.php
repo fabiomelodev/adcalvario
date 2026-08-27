@@ -4,7 +4,7 @@
 
         <div class="w-6/12">
             <h3 class="text-xl font-semibold">
-                Eventos em Agosto
+                Eventos em <?php echo get_month_current_complete(); ?>
             </h3>
         </div>
 
