@@ -65,7 +65,7 @@ $schedules = new WP_Query($args);
                                         </h2>
 
                                         <p class="text-lg font-semibold uppercase text-white mb-6">
-                                            Horário: <?php echo get_sub_field('horario') ?>
+                                            <?php echo get_sub_field('dia_da_semana') . ' às ' . get_sub_field('horario') ?>
                                         </p>
 
                                         <span class="css-content block font-light text-white mb-6">
