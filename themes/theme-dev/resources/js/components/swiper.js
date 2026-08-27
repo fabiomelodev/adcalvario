@@ -4,8 +4,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 new Swiper(".js-swiper-home-banner", {
-  modules: [Navigation, Pagination],
+  modules: [Autoplay, Navigation, Pagination],
   slidesPerView: 1,
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
