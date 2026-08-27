@@ -128,6 +128,14 @@ b {
     @apply fill-black;
   }
 
+  .swiper-schedule img {
+    @apply grayscale;
+  }
+
+  .swiper-schedule .swiper-slide-active img {
+    @apply grayscale-0;
+  }
+
   .tab-menu {
     @apply flex px-4;
   }
@@ -222,13 +230,13 @@ b {
     width: unset !important;
     height: unset !important;
     padding: .5rem 1rem;
+    border-radius: 9999px;
+    gap: .5rem;
     position: unset !important;
   }
 
   .swiper-button-prev-events-other {
     border: 2px solid #FFF;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
   }
 
   .swiper-button-prev-events-other p {
@@ -236,8 +244,6 @@ b {
   }
 
   .swiper-button-next-events-other {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
     background-color: #FFF;
   }
 

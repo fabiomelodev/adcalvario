@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -121,6 +121,39 @@ new Swiper(".js-swiper-testimonials", {
   navigation: {
     prevEl: ".js-swiper-button-prev-testimonials",
     nextEl: ".js-swiper-button-next-testimonials",
+  },
+});
+
+new Swiper(".js-swiper-schedule", {
+  modules: [Navigation],
+  allowTouchMove: false,
+
+  navigation: {
+    prevEl: ".js-swiper-button-prev-schedule",
+    nextEl: ".js-swiper-button-next-schedule",
+  },
+});
+
+new Swiper(".js-swiper-schedule-photos", {
+  modules: [Navigation],
+  slidesPerView: 1.3,
+  spaceBetween: 30,
+  allowTouchMove: false,
+
+  navigation: {
+    prevEl: ".js-swiper-button-prev-schedule",
+    nextEl: ".js-swiper-button-next-schedule",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 15,
+    },
+    1280: {
+      slidesPerView: 1.3,
+      spaceBetween: 30,
+    },
   },
 });
 

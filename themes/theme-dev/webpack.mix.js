@@ -19,4 +19,16 @@ mix
   .version()
   .setResourceRoot("./resources")
   .setPublicPath(".")
-  .disableNotifications();
+  .disableNotifications()
+  .options({
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+        mangle: {
+          reserved: ['el', '_x_transition', '_x_hidePromise', '_x_transitioning']
+        }
+      }
+    }
+  });

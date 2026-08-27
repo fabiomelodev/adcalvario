@@ -19,7 +19,8 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-		<?php while (have_posts()) : the_post(); ?>
+		<?php while (have_posts()):
+			the_post(); ?>
 
 			<!-- carousel -->
 			<?php echo get_template_part('template-parts/content', 'home-carousel') ?>
@@ -28,6 +29,10 @@ get_header();
 			<!-- about -->
 			<?php echo get_template_part('template-parts/content', 'home-about') ?>
 			<!-- end about -->
+
+			<!-- schedule -->
+			<?php echo get_template_part('template-parts/content', 'home-schedule') ?>
+			<!-- end schedule -->
 
 			<!-- board -->
 			<?php echo get_template_part('template-parts/content', 'home-board') ?>
