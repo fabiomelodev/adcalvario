@@ -22,29 +22,34 @@ get_header();
 			<!-- end banner -->
 
 			<!-- address -->
-			<section class="pt-10 lg:py-20">
+			<?php if (have_rows('endereco')):
+				while (have_rows('endereco')):
+					the_row();
+					if (get_sub_field('endereco') && get_sub_field('bairro') && get_sub_field('cidade')):
+						?>
+						<section class="pt-10 lg:py-20">
 
-				<div class="container flex justify-center">
+							<div class="container flex justify-center">
 
-					<?php if (have_rows('endereco')):
-						while (have_rows('endereco')):
-							the_row(); ?>
-							<div class="lg:w-8/12">
+								<div class="lg:w-8/12">
 
-								<div class="border-2 border-gray-400/50 shadow-lg rounded-lg bg-gray-100/50 p-6">
-									<p>
-										<strong>Endereço:</strong>
-										<?php echo get_sub_field('endereco') . ', ' . get_sub_field('numero') . ' - ' . get_sub_field('bairro') . ' - ' . get_sub_field('cep') ?>
-										<br />
-										<strong>Cidade:</strong> <?php echo get_sub_field('cidade') ?>
-									</p>
+									<div class="border-2 border-gray-400/50 shadow-lg rounded-lg bg-gray-100/50 p-6">
+										<p>
+											<strong>Endereço:</strong>
+											<?php echo get_sub_field('endereco') . ', ' . get_sub_field('numero') . ' - ' . get_sub_field('bairro') . ' - ' . get_sub_field('cep') ?>
+
+											<br />
+
+											<strong>Cidade:</strong> <?php echo get_sub_field('cidade') ?>
+										</p>
+									</div>
 								</div>
 							</div>
-						<?php endwhile;
-					endif;
-					?>
-				</div>
-			</section>
+						</section>
+					<?php endif;
+				endwhile;
+			endif;
+			?>
 			<!-- end address -->
 
 			<!-- form -->

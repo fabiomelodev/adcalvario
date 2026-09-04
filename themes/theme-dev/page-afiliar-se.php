@@ -82,11 +82,13 @@ get_header();
 										if (have_rows('endereco')):
 											while (have_rows('endereco')):
 												the_row();
-												?>
-												<p class="text-sm text-center group-hover:text-white">
-													<?php echo get_sub_field('endereco') . ', ' . ' - ' . get_sub_field('bairro') . ' ' . get_sub_field('cidade'); ?>
-												</p>
-												<?php
+												if (get_sub_field('endereco') && get_sub_field('bairro') && get_sub_field('cidade')):
+													?>
+													<p class="text-sm text-center group-hover:text-white">
+														<?php echo get_sub_field('endereco') . ', ' . ' - ' . get_sub_field('bairro') . ' ' . get_sub_field('cidade'); ?>
+													</p>
+													<?php
+												endif;
 											endwhile;
 										endif;
 										?>
