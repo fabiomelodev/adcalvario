@@ -178,8 +178,8 @@ function get_nav_links()
         ],
 
         [
-            'title' => 'Membros',
-            'link' => 'membros'
+            'title' => 'Afiliar-se',
+            'link' => 'afiliar-se'
         ],
 
         [
