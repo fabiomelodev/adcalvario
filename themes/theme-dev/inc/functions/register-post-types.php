@@ -11,6 +11,14 @@ function create_post_type()
         'supports' => array('title')
     ));
 
+    register_post_type('congregacao', array(
+        'labels' => array('name' => 'Congregações', 'singular_name' => 'Congregação', 'all_items' => 'Todas as congregações'),
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-groups',
+        'supports' => array('title')
+    ));
+
     register_post_type('evento', array(
         'labels' => array('name' => 'Eventos', 'singular_name' => 'Evento', 'all_items' => 'Todos'),
         'public' => true,
