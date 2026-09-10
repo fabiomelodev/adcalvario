@@ -13,7 +13,7 @@
 
         <div class="w-full">
             <div
-                class="border-b-[2px] border-white rounded-bl-[20px] rounded-br-[20px] flex flex-col xl:flex-row justify-between pb-6">
+                class="border-b-[2px] border-white rounded-bl-[20px] rounded-br-[20px] flex flex-col xl:flex-row justify-between pb-6 px-6">
                 <div class="flex justify-center xl:justify-start items-center gap-x-8">
                     <h1 class="text-3xl xl:text-6xl font-semibold font-myriad-pro uppercase text-white">
                         <?php the_title() ?>
