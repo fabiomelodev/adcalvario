@@ -50,7 +50,7 @@
                         ),
                         'meta_key' => 'data_do_evento',
                         'orderby' => 'meta_value',
-                        'order' => 'DESC'
+                        'order' => 'ASC'
                     );
 
                     $events = new WP_Query($args);
@@ -191,7 +191,7 @@
                             )
                         ),
                         'orderby' => 'meta_value',
-                        'order' => 'DESC'
+                        'order' => 'ASC'
                     );
 
                     $events = new WP_Query($args);
