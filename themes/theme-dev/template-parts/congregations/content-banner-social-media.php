@@ -1,29 +1,21 @@
 <section
-    class="w-full h-[220px] xl:h-[480px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden relative flex items-end bg-cover bg-no-repeat pb-20">
-
-    <?php
-    the_post_thumbnail('post-thumbnail', array(
-        'class' => 'w-full h-full top-0 left-0 object-cover absolute z-0'
-    ));
-    ?>
-
-    <div class="w-full h-full top-0 left-0 opacity-90 absolute bg-gradient-to-b from-[#C06F4C] to-[#A7233C] z-10"></div>
+    class="w-full min-h-[160px] xl:min-h-[360px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden relative flex items-end bg-gradient-to-b from-[#C06F4C] to-[#A7233C] pb-8 lg:pb-20">
 
     <div class="container relative z-20">
 
         <div class="w-full">
             <div
                 class="border-b-[2px] border-white rounded-bl-[20px] rounded-br-[20px] flex flex-col xl:flex-row justify-between pb-6 px-6">
-                <div class="flex justify-center xl:justify-start items-center gap-x-8">
+
+                <div>
+
+                    <h3 class="text-xl lg:text-4xl font-bold font-myriad-pro uppercase text-white">
+                        Afiliar-se
+                    </h3>
+
                     <h1 class="text-3xl xl:text-6xl font-semibold font-myriad-pro uppercase text-white">
                         <?php the_title() ?>
                     </h1>
-
-                    <div class="hidden xl:flex items-center gap-4">
-                        <?php for ($i = 0; $i < 3; $i++): ?>
-                            <span class="w-4 h-4 rounded-full block bg-white"></span>
-                        <?php endfor; ?>
-                    </div>
                 </div>
 
                 <div class="hidden xl:flex gap-x-8">
