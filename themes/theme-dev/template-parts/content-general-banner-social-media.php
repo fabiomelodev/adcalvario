@@ -1,5 +1,5 @@
 <section
-    class="w-full h-[220px] xl:h-[480px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden relative flex items-end bg-cover bg-no-repeat pb-20">
+    class="w-full h-[150px] lg:h-[220px] xl:h-[480px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden relative flex items-end bg-cover bg-no-repeat pb-4 lg:pb-20">
 
     <?php
     the_post_thumbnail('post-thumbnail', array(

@@ -183,6 +183,11 @@ function get_nav_links()
         ],
 
         [
+            'title' => 'Canais',
+            'link' => 'canais'
+        ],
+
+        [
             'title' => 'Contato',
             'link' => 'contato'
         ],
